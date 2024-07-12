@@ -12,7 +12,7 @@ st.set_page_config(
 st.markdown('<h1><i class="fas fa-faucet"></i> The semi-closed Urban Water Cycle (UWC) as a planning tool to monitor PFAS pollution</h1>', unsafe_allow_html=True)
 
 sep=';'
-df = pd.read_csv('C:\\Users\\Federica\\Python SS_TU\\data.csv', sep=sep)
+df = pd.read_csv('data.csv', sep=sep)
 #st.write(df)
 df3 = df.groupby(['substance_id','treatment_id', 'Country']).size().reset_index(name='number of articles')
 df_country = df3.groupby('Country')['number of articles'].sum().reset_index()
